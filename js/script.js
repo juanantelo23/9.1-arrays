@@ -44,6 +44,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
       listaStrings.push(strangeArray[i]);
     }
   }
-  const listaOrdenada = listaStrings.slice().sort()
+  const listaOrdenada = listaStrings.slice().sort((a,b)=> a.localeCompare(b,undefined,{sensitivity: "base"}));
   showList(listaOrdenada);
 });
